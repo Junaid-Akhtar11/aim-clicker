@@ -1,5 +1,5 @@
 // Config
-const GRID_SIZE = 100; // Change this to 36, 49, 64, 100, etc.
+const GRID_SIZE = 36;
 const DURATION = 30;
 
 // Elements
