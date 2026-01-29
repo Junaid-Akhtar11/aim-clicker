@@ -1,4 +1,4 @@
-# CLICKER AIM // TRAINER
+# Aim-Clicker
 
 > A minimalist, DOM-based reaction trainer trainer. Built entirely with Vanilla JavaScript.
 
