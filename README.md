@@ -1,6 +1,6 @@
 # CLICKER AIM // TRAINER
 
-> A minimalist, DOM-based reaction trainer designed to test speed and precision. Built entirely with Vanilla JavaScript, adhering to the "Arch Linux" terminal aesthetic.
+> A minimalist, DOM-based reaction trainer trainer. Built entirely with Vanilla JavaScript.
 
 **Live Demo:** [https://junaid-akhtar11.github.io/endterm-aimtrainer/](https://junaid-akhtar11.github.io/endterm-aimtrainer/)
 
@@ -10,7 +10,7 @@
 
 **Clicker Aim** is a fully functional web application developed as the **Web Dev II Final Project**. It serves as a competitive aim trainer where users must click appearing targets within a time limit to achieve a high rank.
 
-This project was built to demonstrate mastery of **Core JavaScript** concepts without the use of any frontend frameworks (React, Vue, etc.).
+This project was built to demonstrate my abilities of **Core Vainlla JavaScript** 
 
 ---
 
