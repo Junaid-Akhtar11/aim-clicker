@@ -1,5 +1,5 @@
 // Config
-const GRID_SIZE = 25;
+const GRID_SIZE = 100; // Change this to 36, 49, 64, 100, etc.
 const DURATION = 30;
 
 // Elements
@@ -12,7 +12,7 @@ const subEl = document.getElementById('subtitle');
 
 // State
 let score = 0;
-let timeLeft = DURATION;    
+let timeLeft = DURATION;
 let timerLoop = null;
 let isPlaying = false;
 let targetIdx = -1;
@@ -20,10 +20,17 @@ let targetIdx = -1;
 // Create the grid once
 function initGrid() {
     gridEl.innerHTML = '';
+    
+    const size = Math.ceil(Math.sqrt(GRID_SIZE));
+    gridEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    gridEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
     for (let i = 0; i < GRID_SIZE; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
-        cell.addEventListener('mousedown', () => handleClick(i));
+        
+        cell.dataset.index = i; 
+        
         gridEl.appendChild(cell);
     }
 }
@@ -101,5 +108,12 @@ function gameOver() {
     subEl.innerText = `Targets Hit: ${score} // Rank: ${grade}`;
     overlay.classList.remove('hidden');
 }
+    //Click event listener 
+gridEl.addEventListener('mousedown', (e) => {
+    if (e.target.classList.contains('cell')) {
+        const idx = parseInt(e.target.dataset.index);
+        handleClick(idx);
+    }
+});
 
 initGrid();
